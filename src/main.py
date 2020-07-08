@@ -28,20 +28,20 @@ from config import ASSET
 ################################################################
 
 # Constant
-TITLE = "作品タイトル"
-COPY = "コピィ"
-ONELINE = "一行説明"
-OUTLINE = "あらすじ"
-THEME = "テーマ"
-GENRE = "ジャンル"
-TARGET = "ターゲット（年代）"
-SIZE = "規定サイズ"
-CONTEST_INFO = "コンテスト情報"
-CAUTION = "注意事項"
-NOTE = "備考"
+TITLE = "ミスター・ロクデナシ"
+COPY = "俺の知らない父親は最高のロクデナシだった"
+ONELINE = "幼い頃に亡くなった父を人工知能として蘇らせた"
+OUTLINE = "約5000字のSF短編。人工知能の研究者である男性は幼い頃に亡くなった父をAIとして蘇らせた。しかしその父は想像もしない挙動を見せる"
+THEME = "周囲の人がいくら評価しても子どもにとっての父親なんてロクデナシでしかない"
+GENRE = "SF／ヒューマンドラマ"
+TARGET = "30-40台（男女）"
+SIZE = "〜8K"
+CONTEST_INFO = "妄想コンテスト「お父さん」応募作"
+CAUTION = ""
+NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 RELEASED = (1, 1, 2020)
-MAJOR, MINOR, MICRO = 0, 0, 1
+MAJOR, MINOR, MICRO = 0, 1, 0
 
 
 # Episodes
