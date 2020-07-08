@@ -7,7 +7,10 @@ Story Config
 ASSET = {
         "PERSONS": (
             # (tag / name / full / age (birth) / job / call / info)
-            ('taro', '太郎', '', 17,(1,1), 'male', '学生'),
+            ('masaki', '正木', '正木,豊', 37,(1,1), 'male', '研究者', 'me:僕'),
+            ("dad", "六輔", "正木,六輔", 60,(1,1), 'male', '無職', 'me:俺'),
+            ('mam', '美千代', '正木,美千代', 59,(1,1), 'female', 'パート', 'me:あたし'),
+            ('megu', '恵美', '新浦,恵美', 29,(1,1), 'female', '助手', 'me:私'),
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
