@@ -45,9 +45,14 @@ MAJOR, MINOR, MICRO = 0, 1, 0
 
 
 # Episodes
-def ep_xxx(w: World):
-    return w.episode('episode_title',
-            outline="description")
+def abstract(w: World):
+    return w.writer_note('概要',
+            "幼い頃に父親を亡くした人工知能研究者の男性は、自分の研究成果を使い、父親をAIモデルとして復活させようとする",
+            "昔の知人を伝って父の情報を集めていくうちに、父親はどうも考えうる限りの最低な人間だということが分かってきた",
+            "父親AIが完成し、それを搭載したロボットがお披露目となる",
+            "その時、建物火災が発生し、披露会に集まった人はピンチとなるが、そこで活躍したのが父ロボットだった",
+            "父ロボの言動こそろくでなしそのものだったが、自らを犠牲にして大切な人を守るその精神だけは自分に受け継がれていることを知った",
+            )
 
 
 def ch_main(w: World):
@@ -74,6 +79,7 @@ def main(): # pragma: no cover
     w.config.set_sites(*SITES)
     w.config.set_released(*RELEASED)
     return w.run(
+            abstract(w),
             ch_main(w),
             )
 
