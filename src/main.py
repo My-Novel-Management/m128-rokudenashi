@@ -18,12 +18,13 @@ from config import ASSET
 #
 #   1. Initialize
 #   2. Story memo
-#   3. Story structure
-#   4. Plot
-#   5. Scenes
-#   6. Conte
-#   7. Layout
-#   8. Draft
+#   3. Story structure - 1/8
+#   4. Spec
+#   5. Plot - 1/4
+#   6. Scenes
+#   7. Conte - 1/2
+#   8. Layout
+#   9. Draft - 1/1
 #
 ################################################################
 
@@ -41,33 +42,84 @@ CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 RELEASED = (1, 1, 2020)
-MAJOR, MINOR, MICRO = 0, 2, 0
+MAJOR, MINOR, MICRO = 0, 3, 0
 
 
 # Episode
-
-
-# Chapter
-def ch_main(w: World):
-    return w.chapter('main',
+def ep_AI_project(w: World):
+    return w.episode("AIプロジェクト",
             w.plot_note("$masakiの体にはろくでなしの父がつけたという火傷の跡がある"),
             w.plot_note("人工知能研究者である$masakiは父のことをよく知らない"),
             w.plot_note("ある日、自分の技術を使って昔の人間をAIとして蘇らせるというプロジェクトを企画する"),
             w.plot_note("その企画用に自分の父をAIにすることを思いつく"),
+            "会社から成果を出すよう要請されている",
+            "$masakiは研究ができればいいだけで、別に商品や社会貢献とかは興味ない",
+            "父親は火事で亡くなったと聞いている",
+            "$masakiは熱いものが苦手",
+            "値落ちから起こされるところから、始まる（助手に起こされる）",
+            )
+
+def ep_researching(w: World):
+    return w.episode("聞き取り調査",
             w.plot_note("母や父の知人から父についての話を聞いて、データを集めて回る"),
             w.plot_note("しかし聞けば聞くほど父はろくでなしだった"),
             w.plot_note("データを集めて成長させた父AIの言動は確かにろくでなしそのものだった"),
+            "聞き取りは三人くらい（実際はもっと沢山）",
+            "母親、腐れ縁の友人、よく飲みに行っていた飲み屋のママ",
+            "最初は内部プログラムだけなので、画面越しで父に対面",
+            "第一声から「酒もタバコもできないなんて、AIってのはつまらんもんだな」と",
+            "母親を連れてきて確認すると、確かに父だと証言する",
+            "それでも毎日やってきて時間いっぱいまで話し込んでいくところを見て、親孝行も悪くないんじゃないですか、と助手に言われてしまう",
+            )
+
+def ep_press_conference(w: World):
+    return w.episode("記者会見",
+            w.plot_note("AIの話を聞きつけた上司が、大々的に宣伝して企業に売り込もうと提案する"),
             w.plot_note("そのAIを搭載した父ロボットができあがり、完成披露会見が開かれることになる"),
             w.plot_note("そつなくこなし、他人に迷惑をかけないことが信条だった$masakiは、睡眠不足から火事を起こしてしまう"),
-            w.plot_note("披露会会場には多くの人が集まっていたが、主催者たちは登場しない"),
+            "ずっと自分の仕事以外の仕事も手をつけて寝不足になっていた",
+            "助手から火の元の注意を受けていた",
+            "よく寝落ちしてしまっていた",
+            )
+
+def ep_fire_and_truth(w: World):
+    return w.episode("火事と真実",
             w.plot_note("研究所で目覚めた$masakiは炎の海から逃げられない"),
             w.plot_note("そこに現れたのは父ロボットだった"),
             w.plot_note("父ロボは自分の体が溶けるのも気にせず、$masakiを助け出す"),
             w.plot_note("火災現場からみんなを救出し、息絶えた父ロボット"),
             w.plot_note("母親から「また同じ死に方をした」と"),
             w.plot_note("父の死亡原因は、幼い$masakiと母親を火事の中から助けに戻り、一酸化炭素中毒での死亡だった"),
+            "助手にもう一度蘇らせるか尋ねられて、断る。「きっとまたろくでなしだから」と笑う",
             )
 
+
+# Chapter
+def ch_main(w: World):
+    return w.chapter('main',
+            ep_AI_project(w),
+            ep_researching(w),
+            ep_press_conference(w),
+            ep_fire_and_truth(w),
+            w.symbol("（了）"),
+            )
+
+# History
+def hist_masaki(w: World):
+    return w.chara_note("$masaki",
+            )
+
+def hist_dad(w: World):
+    return w.chara_note("$dad",
+            )
+
+def hist_mam(w: World):
+    return w.chara_note("$mam",
+            )
+
+def hist_megu(w: World):
+    return w.chara_note("$megu",
+            )
 
 # Note
 def abstract(w: World):
@@ -101,6 +153,10 @@ def main(): # pragma: no cover
     return w.run(
             abstract(w),
             ch_main(w),
+            hist_masaki(w),
+            hist_dad(w),
+            hist_mam(w),
+            hist_megu(w),
             )
 
 
