@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.0] - 2020-07-09
+## Added
+- Doc: plot
+
 ## [0.4.0] - 2020-07-09
 ### Added
 - Doc: spec
@@ -28,7 +32,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - This CHANGELOG file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
 - README one line implemented.
 
-[Unreleased]: https://github.com/My-Novel-Management/m128-rokudenashi/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/m128-rokudenashi/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.5.0
 [0.4.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.4.0
 [0.3.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.3.0
 [0.2.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.2.0
