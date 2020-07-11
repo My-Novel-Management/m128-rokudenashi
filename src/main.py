@@ -49,7 +49,7 @@ CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 RELEASED = (1, 1, 2020)
-MAJOR, MINOR, MICRO = 0, 6, 0
+MAJOR, MINOR, MICRO = 0, 7, 0
 
 
 # Episode
@@ -57,7 +57,7 @@ def ep_AI_project(w: World):
     return w.episode("$AIプロジェクト",
             Labo.awaking(w),
             Home.memorial(w),
-            Pub.old_talk(w),
+            Pub.old_talk(w).omit(),
             )
 
 def ep_researching(w: World):
@@ -71,11 +71,11 @@ def ep_researching(w: World):
 
 def ep_press_conference(w: World):
     return w.episode("記者会見",
+            MeetingRoom.meeting(w).omit(),
             Cafeteria.major_topic(w),
-            MeetingRoom.meeting(w),
             TestHall.powerful_robo(w),
             TestHall.back_face(w),
-            Labo.decided_presentation(w),
+            Cafeteria.decided_presentation(w),
             Labo.preparation(w),
             Labo.before_day(w),
             )
