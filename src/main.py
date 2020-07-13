@@ -48,8 +48,8 @@ CONTEST_INFO = "妄想コンテスト「お父さん」応募作"
 CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
-RELEASED = (1, 1, 2020)
-MAJOR, MINOR, MICRO = 0, 7, 0
+RELEASED = (7, 12, 2020)
+MAJOR, MINOR, MICRO = 0, 9, 0
 
 
 # Episode
