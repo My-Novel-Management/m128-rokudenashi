@@ -9,6 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append('storybuilder')
 from storybuilder.builder.world import World
 from storybuilder.assets import basic
+from storybuilder.assets import common_rubi
 from config import ASSET
 # import scenes
 from scenes import Cafeteria
@@ -37,9 +38,9 @@ from scenes import TestHall
 
 # Constant
 TITLE = "ミスター・ロクデナシ"
-COPY = "俺の知らない父親は最高のロクデナシだった"
-ONELINE = "幼い頃に亡くなった父を人工知能として蘇らせた"
-OUTLINE = "約5000字のSF短編。人工知能の研究者である男性は幼い頃に亡くなった父を$AIとして蘇らせた。しかしその父は想像もしない挙動を見せる"
+COPY = "ろくでなしってやつは、本当にどうしようもないんだ"
+ONELINE = "約8000字のSFヒューマンドラマ。AI研究者の男性は自分の亡くなった父をモデルにすることを思いつくが。"
+OUTLINE = "AI研究者の正木（まさき）は研究が上手くいかず、ある時、幼い頃に亡くなった父をモデルにすることを考える。それは上手くいったように思えたが。"
 THEME = "周囲の人がいくら評価しても子どもにとっての父親なんてロクデナシでしかない"
 GENRE = "SF／ヒューマンドラマ"
 TARGET = "30-40台（男女）"
@@ -49,7 +50,7 @@ CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 RELEASED = (7, 12, 2020)
-MAJOR, MINOR, MICRO = 0, 9, 0
+MAJOR, MINOR, MICRO = 1, 1, 0
 
 
 # Episode
@@ -83,7 +84,7 @@ def ep_press_conference(w: World):
             ).omit()
 
 def ep_fire_and_truth(w: World):
-    return w.episode("火事と真実",
+    return w.episode("ミスター・ロクデナシ",
             Labo.awake_in_fire(w),
             Labo.appear_dad_robo(w),
             Company.escaping(w),
@@ -170,6 +171,7 @@ def main(): # pragma: no cover
     w = World.create_world(f"{TITLE}")
     w.config.set_version(MAJOR, MINOR, MICRO)
     w.db.set_from_asset(basic.ASSET)
+    w.db.set_from_asset(common_rubi.ASSET)
     w.db.set_from_asset(ASSET)
     # spec
     w.config.set_copy(f"{COPY}")
