@@ -61,24 +61,26 @@ def ep_AI_project(w: World):
             )
 
 def ep_researching(w: World):
-    return w.episode("聞き取り調査",
+    return w.episode("父ロボット",
             Labo.select_model(w),
             Labo.research_about_dad(w),
             Labo.research_about_dad2(w),
-            Labo.wonderful_AI(w),
+            Labo.wonderful_AI(w).omit(),
             Labo.meet_with_mam(w),
+            Cafeteria.decided_presentation(w),
+            Labo.preparation(w),
             )
 
 def ep_press_conference(w: World):
     return w.episode("記者会見",
             MeetingRoom.meeting(w).omit(),
-            Cafeteria.major_topic(w),
-            TestHall.powerful_robo(w),
-            TestHall.back_face(w),
+            Cafeteria.major_topic(w).omit(),
+            TestHall.powerful_robo(w).omit(),
+            TestHall.back_face(w).omit(),
             Cafeteria.decided_presentation(w),
             Labo.preparation(w),
-            Labo.before_day(w),
-            )
+            Labo.before_day(w).omit(),
+            ).omit()
 
 def ep_fire_and_truth(w: World):
     return w.episode("火事と真実",
