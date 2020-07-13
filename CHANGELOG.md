@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-07-13
+### Changed
+- StoryBuilder (v0.5.9-22)
+- Description
+
 ## [0.9.0] - 2020-07-13
 ### Added
 - Description
@@ -46,7 +51,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - This CHANGELOG file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
 - README one line implemented.
 
-[Unreleased]: https://github.com/My-Novel-Management/m128-rokudenashi/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/My-Novel-Management/m128-rokudenashi/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v1.1.0
 [0.9.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.9.0
 [0.7.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.7.0
 [0.6.0]: https://github.com/My-Novel-Management/m128-rokudenashi/releases/v0.6.0

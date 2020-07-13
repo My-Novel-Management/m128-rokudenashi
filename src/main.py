@@ -38,6 +38,7 @@ from scenes import TestHall
 
 # Constant
 TITLE = "ミスター・ロクデナシ"
+MAJOR, MINOR, MICRO = 1, 1, 0
 COPY = "ろくでなしってやつは、本当にどうしようもないんだ"
 ONELINE = "約8000字のSFヒューマンドラマ。AI研究者の男性は自分の亡くなった父をモデルにすることを思いつくが。"
 OUTLINE = "AI研究者の正木（まさき）は研究が上手くいかず、ある時、幼い頃に亡くなった父をモデルにすることを考える。それは上手くいったように思えたが。"
@@ -50,7 +51,6 @@ CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
 RELEASED = (7, 12, 2020)
-MAJOR, MINOR, MICRO = 1, 1, 0
 
 
 # Episode
